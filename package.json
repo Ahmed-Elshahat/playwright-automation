@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "report": "npx allure-commandline generate allure-results --clean --single-file -o allure-report-single && open allure-report-single/index.html",
+    "report": "node utils/generate-report.js",
     "test:chromium": "npx playwright test --project=chromium --headed",
     "posttest": "npm run report"
   },
