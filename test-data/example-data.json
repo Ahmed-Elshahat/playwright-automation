@@ -1,0 +1,10 @@
+{
+    "templateScenario": {
+        "url": "https://example.com",
+        "expectedTitle": "Example Domain",
+        "actionItems": [
+            "Verify Title",
+            "Check Header"
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "playwrightwebautomationproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx allure-commandline generate allure-results --clean --single-file -o allure-report-single && open allure-report-single/index.html",
+    "test:chromium": "npx playwright test --project=chromium --headed",
+    "posttest": "npm run report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "allure-playwright": "^3.4.3",
+    "playwright": "^1.57.0",
+    "typescript": "^5.9.3"
+  }
+}
