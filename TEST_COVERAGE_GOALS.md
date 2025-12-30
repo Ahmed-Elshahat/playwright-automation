@@ -7,15 +7,9 @@
 
 ## Scope
 ### In Scope
-- **YouTube Home Page**:
-    - Title Verification.
-    - Search Input Visibility & Interaction.
-- **Responsiveness**:
-    - Mobile Viewport verification.
 
 ### Out of Scope
-- Third-party ad verification.
-- Video playback quality metrics (functional playback start only).
+
 
 ## Coverage Measurement
 Tests are instrumented with `[Coverage]` logs to trace execution paths against these goals.
