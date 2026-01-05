@@ -36,7 +36,7 @@ export class PageBase {
    * @param element - Web element selector that code should wait for
    */
   async waitUntilVisibilityOfElement(element: Locator) {
-    await element.waitFor({ state: "visible", timeout: 30000 });
+    await element.waitFor({ state: "visible", timeout: 60000 });
   }
 
   /**

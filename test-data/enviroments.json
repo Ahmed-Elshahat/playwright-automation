@@ -1,0 +1,7 @@
+{
+  "dev": {
+    "baseUrl": "https://dcp-dev1.alrajhitakaful.com/en",
+    "timeout": 30000,
+    "lang": "en"
+  }
+}

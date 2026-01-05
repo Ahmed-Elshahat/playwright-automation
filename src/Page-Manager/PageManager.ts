@@ -1,17 +1,17 @@
-//import { LoginPage } from "./Project-Name1/Login_Page/loginPage";
 import { Page } from "@playwright/test";
-//import { ProductPage } from "./Project-Name1/Products_Page/ProductsPage";
+import { home_Page } from "../Project-Name 1/HomeARTPage/homePage";
+import { MotorInsurancePage } from "../Project-Name 1/OurProducts/MotorInsurancePage";
 
 export class PageManager {
   public static instance: PageManager | null = null;
   public readonly page: Page;
-  //public readonly loginPage: LoginPage;
-  //public readonly productPage: ProductPage;
+  public readonly homePage: home_Page;
+  public readonly motorInsurancePage: MotorInsurancePage;
 
   constructor(page: Page) {
     this.page = page;
-    // this.loginPage = new LoginPage(this.page);
-    // this.productPage = new ProductPage(this.page);
+    this.homePage = new home_Page(this.page);
+    this.motorInsurancePage = new MotorInsurancePage(this.page);
   }
 
   public static getInstance(page: Page): PageManager {
@@ -21,11 +21,10 @@ export class PageManager {
     return PageManager.instance;
   }
 
-  lgnPage() {
-    //  return this.loginPage;
+  ARTHomePage() {
+    return this.homePage;
   }
-
-  productpage() {
-    //  return this.productPage;
+  InMotorInsurancePage() {
+    return this.motorInsurancePage;
   }
 }
