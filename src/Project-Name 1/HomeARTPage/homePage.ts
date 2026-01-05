@@ -17,7 +17,8 @@ export class home_Page extends PageBase {
   async openArtPage(url: string) {
     await this.clearAllCookies();
     await this.navigateToPage(url);
-    await this.waitForSeconds(15);
+    // Wait for a key element to be visible instead of a hard wait
+    await this.waitUntilVisibilityOfElement(this.allowPermissionButton);
   }
 
   async clickOnAllowButtonForAccess() {

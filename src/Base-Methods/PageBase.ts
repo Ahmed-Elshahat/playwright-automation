@@ -26,8 +26,10 @@ export class PageBase {
   /**
    * Wait for specific number of seconds
    * @param timeInSeconds - Number of seconds to wait
+   * @deprecated Use expect assertions or auto-waiting locators instead.
    */
   async waitForSeconds(timeInSeconds: number) {
+    console.warn("Usage of waitForSeconds is deprecated. Prefer auto-waiting.");
     await this.page.waitForTimeout(timeInSeconds * 1000);
   }
 
@@ -76,7 +78,7 @@ export class PageBase {
   async clickButton(button: Locator) {
     await this.waitUntilVisibilityOfElement(button);
     await button.scrollIntoViewIfNeeded();
-    await button.click({ force: true });
+    await button.click();
   }
 
   /**
